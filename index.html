@@ -1,0 +1,202 @@
+
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-icon">🌸</div>
+      <h2>Gigi's Garden</h2>
+      <p>♡ Bot Dashboard ♡</p>
+    </div>
+
+    <p class="sidebar-label">୨୧ YOUR LITTLE GARDEN</p>
+
+    <nav class="navigation">
+      <button class="nav active" data-page="home">
+        <span>🏡</span> Dashboard
+      </button>
+
+      <button class="nav" data-page="welcome">
+        <span>💌</span> Welcome Messages
+      </button>
+
+      <button class="nav" data-page="commands">
+        <span>✨</span> Commands
+      </button>
+
+      <button class="nav" data-page="settings">
+        <span>🪄</span> Settings
+      </button>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div>🌷</div>
+      <h3>Take a little break</h3>
+      <p>and smell the flowers.</p>
+      <span>♡ ♡ ♡</span>
+    </div>
+
+    <div class="sidebar-footer">
+      <strong>🌼 Made with love</strong>
+      <p>Gigi's Garden · v1.0</p>
+    </div>
+  </aside>
+
+  <main class="content">
+
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">୨୧ WELCOME TO YOUR HAPPY PLACE ୨୧</p>
+        <h1 id="page-title">Welcome to the Garden!</h1>
+        <p class="subtitle">Let's make your community bloom. 🌸</p>
+      </div>
+
+      <button type="button" id="discord-login" class="pink-button">
+        🎮 Login with Discord
+      </button>
+    </header>
+
+    <!-- DASHBOARD -->
+    <section id="home-panel" class="page-panel">
+      <div class="hero">
+        <div>
+          <p>🌷 YOUR GARDEN IS GROWING</p>
+          <h2>Let's make something magical!</h2>
+          <p>Take care of your community, one flower at a time. 🌸</p>
+        </div>
+        <div class="hero-flower">🌼</div>
+      </div>
+
+      <div class="section-heading">
+        <h2 id="section-title">Your Garden at a Glance</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <span>💌</span>
+          <h3>Welcome Messages</h3>
+          <p>Give every new member a sweet welcome.</p>
+          <button type="button" class="pink-button" data-go="welcome">
+            Customize 🌷
+          </button>
+        </article>
+
+        <article class="card">
+          <span>✨</span>
+          <h3>Commands</h3>
+          <p>Discover the magic Gigi can bring.</p>
+          <button type="button" class="pink-button" data-go="commands">
+            Explore 🎀
+          </button>
+        </article>
+
+        <article class="card">
+          <span>🪄</span>
+          <h3>Settings</h3>
+          <p>Make your garden feel like home.</p>
+          <button type="button" class="pink-button" data-go="settings">
+            Configure 🌼
+          </button>
+        </article>
+      </div>
+
+      <div class="bottom-card">
+        <h3>🌻 A little reminder</h3>
+        <p>Every lovely community starts with a warm welcome.</p>
+      </div>
+    </section>
+
+    <!-- WELCOME MESSAGES -->
+    <section id="welcome-panel" class="page-panel" hidden>
+      <div class="welcome-card">
+        <h2>💌 Welcome Messages</h2>
+        <p>Make every new member feel at home! 🌷</p>
+
+        <label class="welcome-toggle">
+          <input type="checkbox" id="welcome-enabled" checked>
+          Enable welcome messages
+        </label>
+
+        <label for="welcome-channel">Welcome channel</label>
+        <input
+          type="text"
+          id="welcome-channel"
+          placeholder="e.g. #welcome"
+        >
+
+        <label for="welcome-text">Your welcome message</label>
+        <textarea id="welcome-text" rows="4">Welcome to the Garden, {user}! 🌸 We're happy you're here!</textarea>
+
+        <h3>👀 Preview</h3>
+
+        <div id="welcome-preview" class="welcome-preview">
+          Welcome to the Garden, {user}! 🌸 We're happy you're here!
+        </div>
+
+        <button type="button" id="welcome-save" class="pink-button">
+          Save Settings 🌷
+        </button>
+
+        <p id="welcome-status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- COMMANDS -->
+    <section id="commands-panel" class="page-panel" hidden>
+      <div class="welcome-card">
+        <h2>✨ Garden Commands</h2>
+        <p>Discover what Gigi can do for your community! 🌼</p>
+
+        <div class="command-item">
+          <strong>/help</strong>
+          <p>Discover the available bot commands.</p>
+        </div>
+
+        <div class="command-item">
+          <strong>/ping</strong>
+          <p>Check whether the bot is responding.</p>
+        </div>
+
+        <div class="command-item">
+          <strong>/about</strong>
+          <p>Learn more about Gigi's Garden.</p>
+        </div>
+
+        <p>These are example commands for the dashboard design. 🌷</p>
+      </div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section id="settings-panel" class="page-panel" hidden>
+      <div class="welcome-card">
+        <h2>🪄 Garden Settings</h2>
+        <p>Customize your little corner of the internet. 💗</p>
+
+        <label for="garden-name">Garden name</label>
+        <input
+          type="text"
+          id="garden-name"
+          value="Gigi's Garden"
+        >
+
+        <label for="garden-theme">Garden theme</label>
+        <select id="garden-theme">
+          <option value="pink">Pastel Pink 🌸</option>
+          <option value="lavender">Lavender 💜</option>
+          <option value="mint">Mint Green 🌿</option>
+        </select>
+
+        <p id="settings-status" aria-live="polite"></p>
+
+        <button type="button" id="settings-save" class="pink-button">
+          Save Settings 🌷
+        </button>
+      </div>
+    </section>
+
+    <footer id="garden-footer">
+      <p>Made with ♡ by the Garden Keeper</p>
+      <span>🌸 Stay sweet, stay magical. 🌸</span>
+    </footer>
+
+  </main>
+</div>
